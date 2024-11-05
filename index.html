@@ -21,22 +21,25 @@
     <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Contact-Details-icons.css">
     <link rel="stylesheet" href="assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/divider-text-middle.css">
     <link rel="stylesheet" href="assets/css/Projects-Grid-images.css">
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark" id="mainNav-1" style="background: var(--bs-navbar-brand-hover-color);height: 30px;max-height: 30px;min-height: 30px;">
+    <nav class="navbar navbar-light navbar-expand fixed-top bg-dark d-inline-flex" id="mainNav-1" style="background: var(--bs-navbar-brand-hover-color);height: 30px;max-height: 30px;min-height: 30px;position: fixed;width: 100%;">
         <div class="container">
             <div class="d-flex d-lg-flex justify-content-start justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start" style="width: 100%;height: 28px;margin-bottom: -10px;font-family: 'Varela Round', sans-serif;">
                 <h6 style="color: var(--bs-green);height: 20px;margin-right: 2.5%;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;">QUICK LINKS FOR</h6><a href="https://app.mymusicstaff.com" style="margin-right: 2.5%;">
                     <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">MY MUSIC STAFF</span></em></h6>
                 </a><a href="https://www.blackpoolmusicacademy.co.uk/" style="margin-right: 2.5%;">
                     <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">THE ACADEMY</span></em></h6>
+                </a><a href="https://www.paypal.com/ncp/payment/82FG3BZ2RXPQ8" style="margin-right: 2.5%;">
+                    <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">PAY MEMBERSHIP</span></em></h6>
                 </a>
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light bg-gradient" id="mainNav" style="margin-top: 30px;background: linear-gradient(var(--bs-teal), #7effd9 99%), var(--bs-teal);">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light bg-gradient" id="mainNav" style="background: linear-gradient(var(--bs-teal), #7effd9 99%), var(--bs-teal);margin-top: 30px;">
         <div class="container"><a class="navbar-brand" data-bss-hover-animate="pulse" href="index.html"><img src="assets/img/NewLogo.webp" height="60px"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto" style="--bs-primary: #1a8754;--bs-primary-rgb: 26,135,84;">
@@ -47,7 +50,7 @@
                     <li class="nav-item text-center text-dark"><a class="nav-link link-dark" data-bss-hover-animate="pulse" href="/contact-us">Contact</a></li>
                 </ul>
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item d-lg-flex justify-content-lg-center align-items-lg-center" data-bss-hover-animate="pulse" style="background: var(--bs-green);border-radius: 30px;"><a class="nav-link text-center link-light" href="/enrol" style="color: rgba(255,255,255,0.7);">ENROL today</a></li>
+                    <li class="nav-item d-lg-flex justify-content-lg-center align-items-lg-center" data-bss-hover-animate="pulse" style="background: var(--bs-green);border-radius: 30px;"><a class="nav-link text-center link-light" href="/enrol" style="color: rgba(255,255,255,0.7);">Become a member</a></li>
                 </ul>
             </div>
         </div>
@@ -63,7 +66,25 @@
                     </div>
                 </div>
                 <div class="col-lg-8 mx-auto">
-                    <p class="text-faded mb-5" style="font-family: 'Varela Round', sans-serif;text-shadow: 0px 0px 10px rgba(0,0,0,0.7);">Formed in 2006 by John Shaw &amp; Jim Lomas, Blackpool Music School offers the community of Blackpool and the wider Fylde area the opportunity to learn to play a musical instrument with minimal cost.</p><a class="btn btn-info btn-sm btn-xl" role="button" data-bss-hover-animate="pulse" href="about/" style="background: var(--bs-green);box-shadow: 0px 0px 10px;">Find Out More</a>
+                    <p class="text-faded mb-5" style="font-family: 'Varela Round', sans-serif;text-shadow: 0px 0px 10px rgba(0,0,0,0.7);">Formed in 2006 by John Shaw &amp; Jim Lomas, Blackpool Music School offers the community of Blackpool and the wider Fylde area the opportunity to learn to play a musical instrument with minimal cost.</p>
+                    <div class="d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">
+                        <div class="d-lg-flex justify-content-lg-center align-items-lg-center" style="padding: 2.5%;width: 50%;border-radius: 15px;backdrop-filter: blur(15px) brightness(125%);-webkit-backdrop-filter: blur(15px) brightness(125%);"><div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'PTF9HYBBT9R3Y',
+image: {
+src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+</div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -74,22 +95,22 @@
                 <div class="col offset-lg-8 text-center align-self-center order-first mx-auto">
                     <h2 class="text-white section-heading">The best tuition, at the best price.</h2>
                     <hr class="light my-4">
-                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We offer affordable memberships for any age from 8 years upwards. We provide a variety of different courses including keyboard, piano, saxophone, drums, ukulele, singing, music theory, guitar and many more. This includes short workshops, group sessions and weekly tuition.</p>
-                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We endeavour to keep our costs minimal, which allows us to offer high-value-for-money memberships for those with low incomes, disabilities, or those from disadvantaged backgrounds</p><a class="btn btn-light btn-xl" role="button" data-bss-hover-animate="pulse" href="../enrol">Enrol Today</a>
+                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We offer affordable memberships for any age from 7 years upwards. We provide a variety of different memberships including keyboard, piano, saxophone, drums, band, singing, music theory, guitar and many more.</p>
+                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We endeavour to keep our costs minimal, which allows us to offer high-value-for-money memberships for those with low incomes, disabilities, or those from disadvantaged backgrounds</p><a class="btn btn-light btn-xl" role="button" data-bss-hover-animate="pulse" href="../enrol">BECOME A MEMBER TODAY</a>
                 </div>
-                <div class="col offset-lg-8 text-center align-self-center order-last mx-auto"><img class="rounded" src="assets/img/Drummer_Teaching_Man_To_Play_Drums_original_2512287.jpg" style="margin: 5%;" width="60%"></div>
+                <div class="col offset-lg-8 text-center align-self-center order-last mx-auto"><img class="rounded" src="https://scontent-lhr6-1.xx.fbcdn.net/v/t39.30808-6/456514775_1220074139366082_5610066841181115995_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=tYKlQE1kUvUQ7kNvgGne0-z&amp;_nc_zt=23&amp;_nc_ht=scontent-lhr6-1.xx&amp;_nc_gid=AnM-euiySWONyCzYUska10o&amp;oh=00_AYC8-3cdxMaRu2Z1RFbcd4QuxuH6JMxrFdDk7WkNieZjMw&amp;oe=672FD19D" style="margin: 5%;" width="60%"></div>
             </div>
         </div>
     </section>
     <section id="about-why-us" class="bg-success" style="background: radial-gradient(var(--bs-secondary) 0%, var(--bs-purple) 100%);">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
-                <div class="col offset-lg-8 text-center align-self-center order-first mx-auto"><img class="rounded" src="assets/img/Drummer_Teaching_Man_To_Play_Drums_original_2512287.jpg" style="margin: 5%;" width="60%"></div>
+                <div class="col offset-lg-8 text-center align-self-center order-first mx-auto"><img class="rounded" src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/462683350_1262225541817608_546932547597821639_n.jpg?stp=cp6_dst-jpg&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=1mziYc1QETMQ7kNvgHp1AXE&amp;_nc_zt=23&amp;_nc_ht=scontent-lhr8-1.xx&amp;_nc_gid=AhIli6413rSj_1ZaG5pOIi5&amp;oh=00_AYCbGnTDLbVfx9iqKvVtQ1XwIOx_Dveem1z5omqq5VXjHA&amp;oe=672FEEB8" style="margin: 5%;" width="90%"></div>
                 <div class="col offset-lg-8 text-center align-self-center order-last mx-auto">
                     <h2 class="text-white section-heading">We're different. Good different.</h2>
                     <hr class="light my-4">
-                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">Blackpool Music School, as registered charity, operates on a membership basis. Students can use the music rooms for practice, <em>subject to availability</em>, and access a large library of musical instruments and equipment. Memberships offer numerous benefits, as music can evoke various emotions and inspire motivation.</p>
-                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We offer daytime and evening sessions, weekly in 30-minute and 1-hour lengths. We provide a variety of instruments for students (<em>contact us for details</em>) to use and learn with. Tuition can be either on-site, or in the comfort of your own home (<em>subject to availability</em>).</p><a class="btn btn-light btn-xl" role="button" data-bss-hover-animate="pulse" href="../enrol">Enrol Today</a>
+                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">Blackpool Music School, as registered charity, operates on a membership basis. Students can use the music rooms for practice, <em>subject to availability and conditons</em>, and access a large library of musical instruments and equipment. Memberships offer numerous benefits, as music can evoke various emotions and inspire motivation.</p>
+                    <p class="text-faded mb-4" style="font-family: 'Varela Round', sans-serif;">We offer daytime and evening sessions, weekly in 30-minute and 1-hour lengths (band). We provide a variety of instruments for students (<em>contact us for details</em>) to use and learn with. Tuition can be either on-site, or in the comfort of your own home (<em>limited availability</em>).</p><a class="btn btn-light btn-xl" role="button" data-bss-hover-animate="pulse" href="virtual-tour/">VIRTUAL TOUR</a>
                 </div>
             </div>
         </div>
