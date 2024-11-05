@@ -25,15 +25,15 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand fixed-top bg-dark d-inline-flex" id="mainNav-1" style="background: var(--bs-navbar-brand-hover-color);height: 30px;max-height: 30px;min-height: 30px;position: fixed;width: 100%;">
+    <nav class="navbar navbar-light navbar-expand fixed-top bg-dark d-inline-flex" id="mainNav-1" style="background: var(--bs-navbar-brand-hover-color);height: 30px;max-height: 30px;min-height: 30px;position: fixed;width: 100%;-ms-overflow-style: none;scrollbar-width: none;">
         <div class="container">
-            <div class="d-flex d-lg-flex justify-content-start justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start" style="width: 100%;height: 28px;margin-bottom: -10px;font-family: 'Varela Round', sans-serif;">
-                <h6 style="color: var(--bs-green);height: 20px;margin-right: 2.5%;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;">QUICK LINKS FOR</h6><a href="https://app.mymusicstaff.com" style="margin-right: 2.5%;">
-                    <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">MY MUSIC STAFF</span></em></h6>
+            <div class="d-flex d-lg-flex justify-content-start justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start justify-content-xxl-start" style="height: 28px;margin-bottom: -10px;font-family: 'Varela Round', sans-serif;overflow-x: scroll;">
+                <h6 class="text-nowrap" style="color: var(--bs-green);height: 20px;margin-right: 2.5%;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;">QUICK LINKS FOR</h6><a href="https://app.mymusicstaff.com" style="margin-right: 2.5%;">
+                    <h6 class="text-nowrap" style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">MY MUSIC STAFF</span></em></h6>
                 </a><a href="https://www.blackpoolmusicacademy.co.uk/" style="margin-right: 2.5%;">
-                    <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">THE ACADEMY</span></em></h6>
+                    <h6 class="text-nowrap" style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">THE ACADEMY</span></em></h6>
                 </a><a href="https://www.paypal.com/ncp/payment/82FG3BZ2RXPQ8" style="margin-right: 2.5%;">
-                    <h6 style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">PAY MEMBERSHIP</span></em></h6>
+                    <h6 class="text-nowrap" style="color: var(--bs-green);height: 20px;font-family: 'Open Sans', sans-serif;letter-spacing: -0.5px;"><em><span style="text-decoration: underline;">PAY MEMBERSHIP</span></em></h6>
                 </a>
             </div>
         </div>
@@ -125,16 +125,22 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h4 style="font-family: 'Varela Round', sans-serif;margin-top: 5%;">Pay Online</h4>
-                    <h6 style="font-family: 'Varela Round', sans-serif;">We accept online payments via Stripe and PayPal.</h6><script src="https://www.paypal.com/sdk/js?client-id=BAA5TnwcYbteJmteEmCd21MBJXggcR68gWrwt8rLEKgG9Jl7IfTcFHwLElK4XGZPPSEqEYMrfQkcAK97NM&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+                    <div>
+                        <h4 style="font-family: 'Varela Round', sans-serif;margin-top: 5%;">Pay Online</h4>
+                        <h6 style="font-family: 'Varela Round', sans-serif;">We accept online payments via card or PayPal.</h6><script src="https://www.paypal.com/sdk/js?client-id=BAA5TnwcYbteJmteEmCd21MBJXggcR68gWrwt8rLEKgG9Jl7IfTcFHwLElK4XGZPPSEqEYMrfQkcAK97NM&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
 <div id="paypal-container-82FG3BZ2RXPQ8"></div>
 <script>
   paypal.HostedButtons({
     hostedButtonId: "82FG3BZ2RXPQ8",
   }).render("#paypal-container-82FG3BZ2RXPQ8")
+    
+window.onload = function() {
+    document.getElementsByClassName("pp-YQPQR5ZTLLH4Q")[0].value = "Pay By Card";
+}
 </script>
-                    <div class="d-lg-flex justify-content-lg-start" style="margin-top: 7.5%;">
-                        <h4 class="text-center d-lg-flex" style="font-family: 'Varela Round', sans-serif;margin-right: 2.5%;">Or</h4><style>.pp-YQPQR5ZTLLH4Q{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:0.875rem;line-height:1.125rem;cursor:pointer;}</style>
+                    </div>
+                    <div style="margin-top: 10%;">
+                        <h5 style="font-family: 'Varela Round', sans-serif;margin-top: 5%;">Pay Another Bill</h5><style>.pp-YQPQR5ZTLLH4Q{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:0.875rem;line-height:1.125rem;cursor:pointer;}</style>
 <form action="https://www.paypal.com/ncp/payment/YQPQR5ZTLLH4Q" method="post" target="_top" style="display: inline-grid;justify-items: center;align-content: start;gap: 0.5rem;">
   <input class="pp-YQPQR5ZTLLH4Q" type="submit" value="Pay Another Bill" />
 </form>
