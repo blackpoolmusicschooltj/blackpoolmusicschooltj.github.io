@@ -22,6 +22,21 @@
         <loc>/policies/</loc>
     </url>
     <url>
+        <loc>/staff/</loc>
+    </url>
+    <url>
+        <loc>/store/checkout.html</loc>
+    </url>
+    <url>
+        <loc>/store/</loc>
+    </url>
+    <url>
+        <loc>/store/product.html</loc>
+    </url>
+    <url>
+        <loc>/store/status.html</loc>
+    </url>
+    <url>
         <loc>/tuition/</loc>
     </url>
     <url>
