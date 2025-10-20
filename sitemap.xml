@@ -25,10 +25,16 @@
         <loc>/staff/</loc>
     </url>
     <url>
+        <loc>/store/banking/</loc>
+    </url>
+    <url>
         <loc>/store/checkout.html</loc>
     </url>
     <url>
         <loc>/store/</loc>
+    </url>
+    <url>
+        <loc>/store/index_dev.html</loc>
     </url>
     <url>
         <loc>/store/product.html</loc>

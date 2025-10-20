@@ -1,0 +1,65 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Blackpool Music School</title><meta name="description" content="We offer affordable memberships for any age from 8 years upwards. We provide a variety of different music including keyboard, piano, saxophone, drums, ukulele, singing, music theory, guitar and many more."><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp"><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp"><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp"><link rel="icon" type="image/webp" sizes="912x1093" href="../../assets/img/Favicon.webp"><link rel="icon" type="image/webp" sizes="708x240" href="../../assets/img/NewLogo.webp"><link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="../../assets/css/Merriweather.css"><link rel="stylesheet" href="../../assets/css/Open%20Sans.css"><link rel="stylesheet" href="../../assets/css/swiper-icons.css"><link rel="stylesheet" href="../../assets/css/Varela%20Round.css"><link rel="stylesheet" href="../../assets/css/baguetteBox.min.css"><link rel="stylesheet" href="../../assets/css/Contact-Details-icons.css"><link rel="stylesheet" href="../../assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css"><link rel="stylesheet" href="../../assets/css/custom.css"><link rel="stylesheet" href="../../assets/css/divider-text-middle.css"><link rel="stylesheet" href="../../assets/css/Projects-Grid-images.css"><link rel="stylesheet" href="../../assets/css/Simple-Slider-swiper-bundle.min.css"><link rel="stylesheet" href="../../assets/css/Simple-Slider.css"></head><body><div class="text-center" style="padding: 5%;font-family: 'Varela Round', sans-serif;"><img src="../../assets/img/NewLogo.webp" width="20%" style="margin-bottom: 5%;"><h1 style="font-family: 'Varela Round', sans-serif;">Payment</h1><div class="alert alert-warning" role="alert"><span><strong>Be careful</strong> when sending your payment. If you do not use the correct reference/description then the payment may not be linked to your purchase and you will still be charged.</span></div><div style="margin-top: 2.5%;padding: 2.5%;font-family: 'Varela Round', sans-serif;background: var(--bs-success-bg-subtle);border-radius: 15px;"><h3 style="font-family: 'Varela Round', sans-serif;">Bank Transfer&nbsp;<img src="../../assets/img/icons/Faster_Payments_logo.svg.png" height="30"></h3><p><strong>This is our preferred method of payment.</strong></p><p id="amountTxt">Please transfer {amount} using the details below:</p><div class="d-md-flex justify-content-md-center"><div class="table-responsive" style="font-family: 'Varela Round', sans-serif;max-width: 500px;"><table class="table table-hover"><tbody><tr><td class="fw-bold text-end" style="background: transparent;">Account Name</td><td class="text-start" style="background: transparent;">Blackpool Music Academy</td></tr><tr><td class="fw-bold text-end" style="background: transparent;">Sort Code</td><td class="text-start" style="background: transparent;">40-12-13</td></tr><tr><td class="fw-bold text-end" style="background: transparent;">Account Number</td><td class="text-start" style="background: transparent;">72038196</td></tr><tr><td class="fw-bold text-end" style="background: transparent;">Bank Name</td><td class="text-start" style="background: transparent;">HSBC BANK PLC</td></tr><tr><td class="fw-bold text-end" style="background: transparent;">Reference</td><td class="text-start" id="referenceTxt" style="background: transparent;">S-{orderid}</td></tr></tbody></table></div></div></div><button class="btn btn-link btn-sm" id="cannotTransferBtn" type="button" style="margin-top: 2.5%;font-family: 'Varela Round', sans-serif;font-size: 10px;" onclick="showPayPalDiv()">I can't make bank transfers</button><div id="paypalDiv" style="margin-top: 2.5%;padding: 2.5%;font-family: 'Varela Round', sans-serif;background: var(--bs-success-bg-subtle);border-radius: 15px;"><h3 style="font-family: 'Varela Round', sans-serif;">Debit / Credit Card&nbsp;<span style="font-family: 'Varela Round', sans-serif;"><img src="../../assets/img/icons/mc_symbol_opt_73_3x.png" height="20" width="28"><img class="img-fluid" src="../../assets/img/icons/Visa_Brandmark_Blue_RGB_2021.png" style="padding-right: 0.5%;padding-left: 0.5%;" width="75"><img class="img-fluid" src="../../assets/img/icons/American%20Express%20Square%20Logo.png" height="20" width="28"><img class="rounded img-fluid" src="../../assets/img/icons/4846327.png" height="20" width="28"></span></h3><p id="amountTxt2">Please pay {amount} using the button below:</p><div class="d-md-flex justify-content-md-center"><div class="table-responsive" style="font-family: 'Varela Round', sans-serif;max-width: 500px;"><table class="table table-hover"><tbody><tr><td style="background: transparent;">Description</td><td id="descTxt" style="background: transparent;">S-{orderid}</td></tr></tbody></table></div><div onload="addDetails();"></div>
+
+<script>
+    window.onload = function() {
+        addDetails()
+    };
+
+    function getUrlParameter(desiredKey) {
+        const url = window.location.href
+        const parsedUrl = new URL(url);
+        const params = new URLSearchParams(parsedUrl.search);
+        const entries = {};
+
+        for (const [key, value] of params.entries()) {
+            if (key == desiredKey)
+                return value;
+        }
+    }
+
+    function addDetails()
+    {
+        document.getElementById("amountTxt").innerHTML = "Please transfer <strong>" + getUrlParameter("amount") + "</strong> using the details below:";
+        document.getElementById("referenceTxt").innerText = "S-" + getUrlParameter("orderid");
+    }
+</script></div><p><a href="#"><img src="../../assets/img/icons/buy%20now.png" style="max-height: 50px;"></a></p><div onload="addDetails();"></div>
+
+<script>
+    window.onload = function() {
+        addDetails()
+    };
+
+    function getUrlParameter(desiredKey) {
+        const url = window.location.href
+        const parsedUrl = new URL(url);
+        const params = new URLSearchParams(parsedUrl.search);
+        const entries = {};
+
+        for (const [key, value] of params.entries()) {
+            if (key == desiredKey)
+                return value;
+        }
+    }
+
+    function addDetails()
+    {
+        const amount = getUrlParameter("amount")
+        const orderId = getUrlParameter("orderid")
+
+        document.getElementById("amountTxt").innerHTML = "Please transfer <strong>" + amount + "</strong> using the details below:";
+
+        document.getElementById("amountTxt2").innerHTML = "Please pay <strong>" + amount + "</strong> using the button below:";
+
+        document.getElementById("referenceTxt").innerText = "S-" + orderId;
+
+        document.getElementById("descTxt").innerText = "S-" + orderId;
+
+        document.getElementById("paypalDiv").style["display"] = "none";
+    }
+
+    function showPayPalDiv()
+    {
+        document.getElementById("cannotTransferBtn").style["display"] = "none";
+        document.getElementById("paypalDiv").style["display"] = "block";
+    }
+</script></div></div><script src="../../assets/bootstrap/js/bootstrap.min.js"></script><script src="../../assets/js/bs-init.js"></script><script src="../../assets/js/baguetteBox.min.js"></script><script src="../../assets/js/creative.js"></script><script src="../../assets/js/Contact-Form-v2-Modal--Full-with-Google-Map-scripts.js"></script><script src="../../assets/js/Lightbox-Gallery.js"></script><script src="../../assets/js/Simple-Slider-swiper-bundle.min.js"></script><script src="../../assets/js/Simple-Slider.js"></script></body></html>
