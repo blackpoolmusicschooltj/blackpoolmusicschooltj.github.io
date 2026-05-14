@@ -11,14 +11,10 @@
   box-shadow: 0 2px 14px rgba(0,0,0,0.07) !important;
   border: 1px solid #ececec !important;
   background: #ffffff !important;
-  transition: box-shadow 0.22s ease, transform 0.22s ease !important;
+  transition: none !important;
   cursor: pointer !important;
 }
 
-.ref-product:hover {
-  box-shadow: 0 10px 32px rgba(0,0,0,0.13) !important;
-  transform: translateY(-4px) !important;
-}
 
 .ref-media {
   overflow: hidden !important;
@@ -34,9 +30,6 @@
   width: 100% !important;
 }
 
-.ref-product:hover .ref-image {
-  transform: scale(1.05) !important;
-}
 
 .ref-product-data {
   padding: 16px 18px 20px !important;
@@ -103,34 +96,26 @@
   text-overflow: unset !important;
 }
 
-/* Flat look — remove shadows and rounding */
+/* Flat look — remove shadows, rounding, and grey dividers */
 .ref-summary,
 .ref-summary-body,
 .ref-summary-footer {
   box-shadow: 0 1px 4px rgba(0,0,0,0.12) !important;
   border-radius: 0 !important;
-}
-
-/* Add to Cart button */
-.ref-product .ref-button {
-  background: #1a8754 !important;
   border: none !important;
-  border-radius: 8px !important;
-  font-family: 'Varela Round', sans-serif !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.2px !important;
-  padding: 11px 0 !important;
-  width: 100% !important;
-  display: block !important;
-  text-align: center !important;
-  transition: background 0.18s ease !important;
-  color: #ffffff !important;
 }
 
-.ref-product .ref-button:hover {
-  background: #145c3a !important;
-  opacity: 1 !important;
+.ref-product-wrapper,
+.ref-summary-body > *,
+.ref-summary-footer > * {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Add to Cart button — hidden */
+.ref-product .ref-button {
+  display: none !important;
 }
 
 /* ── Product modal ── */
@@ -289,20 +274,6 @@
   document.addEventListener('click', function (e) {
     var productList = e.target.closest('[data-reflow-type="product-list"]');
     if (!productList) return;
-
-    // "Add to Cart" button — add directly to cart, suppress Reflow's detail panel
-    var btn = e.target.closest('.ref-button');
-    if (btn) {
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      var card = btn.closest('.ref-product');
-      var link = card && card.querySelector('a[href*="product.html"]');
-      if (link && window.Reflow && Reflow.cart) {
-        var productId = new URL(link.href, location.href).searchParams.get('product');
-        if (productId) Reflow.cart.addProduct(productId, 1);
-      }
-      return;
-    }
 
     // Card link click — open product detail in modal
     var link = e.target.closest('a[href*="product.html"]');
