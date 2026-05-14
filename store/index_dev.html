@@ -96,21 +96,23 @@
   text-overflow: unset !important;
 }
 
-/* Flat look — remove shadows, rounding, and grey dividers */
+/* Flat look — remove all borders and dividers from cart dropdown */
 .ref-summary,
 .ref-summary-body,
-.ref-summary-footer {
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12) !important;
+.ref-summary-footer,
+.ref-summary *,
+.ref-summary hr {
+  box-shadow: none !important;
   border-radius: 0 !important;
-  border: none !important;
-}
-
-.ref-product-wrapper,
-.ref-summary-body > *,
-.ref-summary-footer > * {
   border: none !important;
   border-top: none !important;
   border-bottom: none !important;
+  background-image: none !important;
+}
+
+.ref-summary {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12) !important;
+  background: #ffffff !important;
 }
 
 /* Add to Cart button — hidden */
