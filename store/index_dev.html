@@ -245,22 +245,14 @@
     if (e.key === 'Escape') closeModal();
   });
 
-  // Capture phase — runs before Reflow's own handlers so we can block them.
-  // Intercepts both card-link clicks and "Add to Cart" button clicks on listing cards.
+  // Intercepts card-link clicks to open product detail in modal.
+  // "Add to Cart" button clicks are left for Reflow to handle natively (adds to cart).
   document.addEventListener('click', function (e) {
     var productList = e.target.closest('[data-reflow-type="product-list"]');
     if (!productList) return;
 
-    // "Add to Cart" button on a listing card
-    var btn = e.target.closest('.ref-button');
-    if (btn) {
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      var card = btn.closest('.ref-product');
-      var link = card && card.querySelector('a[href*="product.html"]');
-      if (link) openModal(link.href);
-      return;
-    }
+    // Skip if clicking the Add to Cart button — let Reflow handle it
+    if (e.target.closest('.ref-button')) return;
 
     // Card link click
     var link = e.target.closest('a[href*="product.html"]');
