@@ -70,6 +70,47 @@
   margin-bottom: 14px !important;
 }
 
+/* ── Cart dropdown overrides ── */
+
+/* Remove slide/fade animations */
+.ref-summary,
+.reflow-shopping-cart {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Widen the dropdown so text isn't cut off */
+.ref-summary.dropdown {
+  min-width: 460px !important;
+  max-width: 560px !important;
+}
+
+/* Pad out each cart item row */
+.ref-product-wrapper {
+  padding: 14px 16px !important;
+  gap: 14px !important;
+  flex-wrap: nowrap !important;
+}
+
+.ref-product-col {
+  padding: 8px 10px !important;
+}
+
+/* Allow product name to wrap instead of being clipped */
+.ref-product-name {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+/* Flat look — remove shadows and rounding */
+.ref-summary,
+.ref-summary-body,
+.ref-summary-footer {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12) !important;
+  border-radius: 0 !important;
+}
+
 /* Add to Cart button */
 .ref-product .ref-button {
   background: #1a8754 !important;
@@ -245,22 +286,31 @@
     if (e.key === 'Escape') closeModal();
   });
 
-  // Intercepts card-link clicks to open product detail in modal.
-  // "Add to Cart" button clicks are left for Reflow to handle natively (adds to cart).
   document.addEventListener('click', function (e) {
     var productList = e.target.closest('[data-reflow-type="product-list"]');
     if (!productList) return;
 
-    // Skip if clicking the Add to Cart button — let Reflow handle it
-    if (e.target.closest('.ref-button')) return;
+    // "Add to Cart" button — add directly to cart, suppress Reflow's detail panel
+    var btn = e.target.closest('.ref-button');
+    if (btn) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      var card = btn.closest('.ref-product');
+      var link = card && card.querySelector('a[href*="product.html"]');
+      if (link && window.Reflow && Reflow.cart) {
+        var productId = new URL(link.href, location.href).searchParams.get('product');
+        if (productId) Reflow.cart.addProduct(productId, 1);
+      }
+      return;
+    }
 
-    // Card link click
+    // Card link click — open product detail in modal
     var link = e.target.closest('a[href*="product.html"]');
     if (link) {
       e.preventDefault();
       openModal(link.href);
     }
-  }, true); // true = capture phase
+  }, true); // capture phase fires before Reflow's bubble-phase handlers
 })();
 </script>
 </body></html>
