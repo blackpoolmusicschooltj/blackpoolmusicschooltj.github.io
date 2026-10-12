@@ -1,1 +1,1 @@
-$("[data-toggle=tooltip]").tooltip();
+if (window.jQuery) { jQuery("[data-toggle=tooltip]").tooltip(); }
